@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Kamil Trzciński <ayufan@ayufan.eu>
+MAINTAINER Open BaseBox.org <open@basebox.org>
 
 # Install required dependencies
 RUN apt-get update && \
