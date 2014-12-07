@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.15
-MAINTAINER Kamil Trzciński <ayufan@ayufan.eu>
+MAINTAINER Open BaseBox.org <open@basebox.org>
 
 # Install required dependencies
 RUN apt-get update && \
@@ -36,6 +36,9 @@ ADD / /srv/dokku-alt
 WORKDIR /srv/dokku-alt
 RUN sed -i 's/linux-image-extra-virtual, //g' deb/dokku-alt/DEBIAN/control
 RUN make install
+
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 22 80 443
 
