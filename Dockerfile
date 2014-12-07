@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM phusion/baseimage:0.9.15
 MAINTAINER Kamil Trzciński <ayufan@ayufan.eu>
 
 # Install required dependencies
